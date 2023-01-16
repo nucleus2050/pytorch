@@ -44,6 +44,9 @@ for epoch in range(num_epochs):
         print(f'epoch: {epoch + 1}, loss = {loss.item():.4f}')
 
 # Plot
+print("parameters:",model.weight)
+
+test=model(X)
 predicted = model(X).detach().numpy()
 
 plt.plot(X_numpy, y_numpy, 'ro')
